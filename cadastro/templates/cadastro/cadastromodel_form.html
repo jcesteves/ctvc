@@ -1,0 +1,17 @@
+{% extends 'html/base.html' %}
+{% load bootstrap4%}
+{% bootstrap_messages %}
+
+{% block content%}
+<form method="post">
+<div class="row">
+    <div class="col-sm">
+        {% csrf_token %}
+        {%bootstrap_form form%}
+
+    </div>
+</div>
+    <input type="submit" value="Cadastrar">
+</form>
+
+{% endblock content%}
